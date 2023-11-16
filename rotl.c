@@ -1,10 +1,11 @@
 #include "monty.h"
 /**
-  *montyRotl- func rotates the stack.
-  *@head: param - stack head
-  *@counter: param - line position
+  *monty_rotl- rotates the stack.
+  *@head: stack head
+  *@counter: line position
+  *author: Darryl & Isaac
  */
-void montyRotl(stack_t **head,  __attribute__((unused)) unsigned int counter)
+void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter)
 {
 	stack_t *curr;
 	stack_t *result;

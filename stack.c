@@ -1,10 +1,11 @@
 #include "monty.h"
 /**
- * montyStack - func prints the top
+ * montyStack - display  the top
  * @head: param - stack head
- * @counter: param - line position
+ * @counter:line position
+ * Authors: Darryl & Isaac
 */
-void montyStack(stack_t **head, unsigned int counter)
+void monty_stack(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;

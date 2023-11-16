@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * montyMul - func gets product of the top two elements.
- * @head: param - stack head
- * @counter: param - line position
+ * montyMul -  gets product of the top two elements.
+ * @head: stack head
+ * @counter:line position
  * Author: Darryl && Isaac
 */
-void monty_multiply(stack_t **head, unsigned int counter)
+void monty_muL(stack_t **head, unsigned int counter)
 {
 	int lenght;
 	int result;

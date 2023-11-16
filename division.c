@@ -5,7 +5,7 @@
  * @counter: line position
  * authors: Darryl && Isaac
 */
-void monty_divide(stack_t **head, unsigned int counter)
+void monty_div(stack_t **head, unsigned int counter)
 {
 	stack_t *current;
 	int length;

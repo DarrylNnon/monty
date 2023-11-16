@@ -1,10 +1,11 @@
 #include "monty.h"
 /**
- * montySwap - adds the top two elements of the stack.
- * @head: param - stack head
- * @counter: param - line position
+ * monty_swap - append the top two elements of the stack.
+ * @head:stack head
+ * @counter:line position
+ * Authors: Darryl & Isaac
 */
-void montySwap(stack_t **head, unsigned int counter)
+void monty_swap(stack_t **head, unsigned int counter)
 {
 	int result, l;
 	stack_t *hd;
@@ -17,7 +18,7 @@ void montySwap(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
 		fclose(stub.p_file);
 		free(stub.cont);
-		clear_me(*head);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	hd = *head;

@@ -1,10 +1,11 @@
 #include "monty.h"
 /**
- * montyPstr - displays string starting at the top.
- * @head: paaram - stack head
- * @counter: param - line position
+ * monty_pstr - starting at the top.
+ * @head: stack head
+ * @counter:line position
+ * Authors: Darryl & Isaac
 */
-void montyPstr(stack_t **head, unsigned int counter)
+void monty_pstr(stack_t **head, unsigned int counter)
 {
 	stack_t *my_hd;
 	(void)counter;

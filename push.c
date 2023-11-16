@@ -1,10 +1,11 @@
 #include "monty.h"
 /**
- * montyPush - func pushes node to stack
- * @head: param - stack head
- * @counter: param - line position
+ * monty_push - pushes node to stack
+ * @head: stack head
+ * @counter:line position
+ * Author: Darryl & Isaac
 */
-void montyPush(stack_t **head, unsigned int counter)
+void monty_push(stack_t **head, unsigned int counter)
 {
 	int n, count = 0, f = 0;
 
@@ -22,7 +23,7 @@ void montyPush(stack_t **head, unsigned int counter)
 			fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(stub.p_file);
 			free(stub.cont);
-			clear_me(*head);
+			free_stack(*head);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -31,12 +32,12 @@ void montyPush(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(stub.p_file);
 		free(stub.cont);
-		clear_me(*head);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(stub.myarg);
 	if (stub.fin == 0)
-		montyAddnode(head, n);
+		monty_addnode(head, n);
 	else
-		montyAddqueue(head, n);
+		monty_addqueue(head, n);
 }

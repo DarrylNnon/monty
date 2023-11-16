@@ -1,24 +1,25 @@
 #include "monty.h"
 /**
- * montyMod - func computes mod of first two members
- * @head: param - stack head
- * @counter: param - line position
+ * montyMod - computes mod of first two members
+ * @head: stack head
+ * @counter: line position
+ * Authors: Darryl & Isaac
 */
-void montyMod(stack_t **head, unsigned int counter)
+void monty_mod(stack_t **head, unsigned int counter)
 {
 	stack_t *hd;
-	int l;
+	int lenght;
 	int result;
 
 	hd = *head;
-	for (l = 0; hd != NULL; l++)
+	for (lenght = 0; hd != NULL; lenght++)
 		hd = hd->next;
 	if (l < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
 		fclose(stub.p_file);
 		free(stub.cont);
-		clear_me(*head);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	hd = *head;
@@ -27,7 +28,7 @@ void montyMod(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: division by zero\n", counter);
 		fclose(stub.p_file);
 		free(stub.cont);
-		clear_me(*head);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	result = hd->next->n % hd->n;
