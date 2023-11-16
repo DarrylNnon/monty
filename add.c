@@ -7,12 +7,12 @@
 */
 void addmy_monty(stack_t **head, unsigned int counter)
 {
-	int lenght;
+	int length;
 	stack_t *h;
 	int my_result;
 
 	h = *head;
-	for (length = 0; h != NULL; length++)
+	for (l = 0; h != NULL; length++)
 		h = h->next;
 	if (length < 2)
 	{
