@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- * _rotl - rotates the first element to the bottom and  the second to the top
- *
- * @doubly: head of the linked list
- * @cline: line number;
- * Return: no return
+ * _rotl - Rotates the first element to the bottom and the second to the top
+ * @doubly: Head of the linked list
+ * @cline: Line number
+ * Return: No return
  */
 void _rotl(stack_t **doubly, unsigned int cline)
 {
@@ -33,11 +32,10 @@ void _rotl(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _rotr - reverse the stack
- *
- * @doubly: head of the linked list
- * @cline: line number
- * Return: no return
+ * _rotr - Reverse the stack
+ * @doubly: Head of the linked list
+ * @cline: Line number
+ * Return: No return
  */
 void _rotr(stack_t **doubly, unsigned int cline)
 {
@@ -61,3 +59,4 @@ void _rotr(stack_t **doubly, unsigned int cline)
 	(*doubly)->prev = aux;
 	*doubly = aux;
 }
+

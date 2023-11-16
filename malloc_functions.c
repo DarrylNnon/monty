@@ -1,14 +1,15 @@
 #include "monty.h"
+
 /**
- * _calloc - concatenate tw strings specially
- * @nmemb: number of elements
- * @size: type of elements
- * Return: nothing
+ * _calloc - Concatenates two strings specially
+ * @nmemb: Number of elements
+ * @size: Type of elements
+ * Return: Nothing
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *p = NULL;
-	unsigned int i;
+	unsigned int j;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -19,23 +20,24 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < (nmemb * size); i++)
+	for (j = 0; j < (nmemb * size); j++)
 	{
-		*((char *)(p) + i) = 0;
+		*((char *)(p) + j) = 0;
 	}
 	return (p);
 }
+
 /**
- * _realloc - change the size and copy the content
- * @ptr: malloc pointer to reallocate
- * @old_size: old number of bytes
- * @new_size: new number of Bytes
- * Return: nothing
+ * _realloc - Changes the size and copies the content
+ * @ptr: Malloc pointer to reallocate
+ * @old_size: Old number of bytes
+ * @new_size: New number of bytes
+ * Return: Nothing
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *p = NULL;
-	unsigned int i;
+	unsigned int j;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -56,8 +58,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		p = malloc(new_size);
 		if (!p)
 			return (NULL);
-		for (i = 0; i < old_size; i++)
-			p[i] = *((char *)ptr + i);
+		for (j = 0; j < old_size; j++)
+			p[j] = *((char *)ptr + j);
 		free(ptr);
 	}
 	else
@@ -65,9 +67,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		p = malloc(new_size);
 		if (!p)
 			return (NULL);
-		for (i = 0; i < new_size; i++)
-			p[i] = *((char *)ptr + i);
+		for (j = 0; j < new_size; j++)
+			p[j] = *((char *)ptr + j);
 		free(ptr);
 	}
 	return (p);
 }
+
