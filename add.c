@@ -11,7 +11,7 @@ void monty_add(stack_t **head, unsigned int counter)
 	int result;
 	current_node = *head;
 
-	for (stack_length = 0; current_node != NULL; stack_length++)
+	for (length = 0; current_node != NULL; length++)
 		current_node = current_node->next;
 	/* check if the stack has at least two elements*/
 
