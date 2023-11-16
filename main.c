@@ -1,5 +1,5 @@
 #include "monty.h"
-#include "vars.h"
+#include "variables.h"
 #include <stdio.h>
 /**
 * main - main monty code runner.

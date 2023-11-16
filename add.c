@@ -1,12 +1,13 @@
 #include "monty.h"
 /**
- * montyAdd - func sums the first two elements of stack.
+ * addmy_monty - display  the first two elements of stack.
  * @head: param head
  * @counter: line counter
+ * Authors: Darryl && Isaac
 */
-void montyAdd(stack_t **head, unsigned int counter)
+void addmy_monty(stack_t **head, unsigned int counter)
 {
-	int length;
+	int lenght;
 	stack_t *h;
 	int my_result;
 

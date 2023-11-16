@@ -1,28 +1,42 @@
 #include "monty.h"
 /**
- * montyAddnode - func sums head stack
- * @head: param head of stack
- * @n: param new entrant
+ * montyPush - func pushes node to stack
+ * @head: param - stack head
+ * @counter: param - line position
 */
-void montyAddnode(stack_t **head, int n)
+void montyPush(stack_t **head, unsigned int counter)
 {
-	stack_t *new_entry;
-	stack_t *ux;
+	int n, count = 0, f = 0;
 
-	ux = *head;
-	new_entry = malloc(sizeof(stack_t));
-	if (!new_entry)
-	{ 
-		printf("Error\n");
-		exit(0); 
-	}
-	if (ux != NULL)
+	if (stub.myarg)
 	{
-		ux->prev = new_entry;
+		if (stub.myarg[0] == '-')
+			count++;
+		for (; stub.myarg[count] != '\0'; count++)
+		{
+			if (stub.myarg[count] > 57 || stub.myarg[count] < 48)
+				f = 1;
+		}
+		if (f == 1)
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", counter);
+			fclose(stub.p_file);
+			free(stub.cont);
+			clear_me(*head);
+			exit(EXIT_FAILURE);
+		}
 	}
-	new_entry->n = n;
-	new_entry->next = *head;
-	new_entry->prev = NULL;
-
-	*head = new_entry;
+	else
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", counter);
+		fclose(stub.p_file);
+		free(stub.cont);
+		clear_me(*head);
+		exit(EXIT_FAILURE);
+	}
+	n = atoi(stub.myarg);
+	if (stub.fin == 0)
+		montyAddnode(head, n);
+	else
+		montyAddqueue(head, n);
 }
