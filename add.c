@@ -5,14 +5,14 @@
  * @counter: line counter
  * Authors: Darryl && Isaac
 */
-void addmy_monty(stack_t **head, unsigned int counter)
+void montyAdd(stack_t **head, unsigned int counter)
 {
 	int length;
 	stack_t *h;
 	int my_result;
 
 	h = *head;
-	for (l = 0; h != NULL; length++)
+	for (length = 0; h != NULL; length++)
 		h = h->next;
 	if (length < 2)
 	{
